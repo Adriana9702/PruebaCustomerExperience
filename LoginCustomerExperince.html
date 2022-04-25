@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head" runat="server">
+    <meta charset="utf-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Login Customer Experience</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Dongle&family=Inconsolata:wght@800&family=Inter:wght@300;500&family=Varela+Round&display=swap"
+          rel="stylesheet">
+    <script src="JavaScript/cookieManagement.js" type="text/javascript"></script>
+    <style type="text/css">
+        :root {
+            --blue-body: #1561A4;
+            --grey-dark: #A1A1A1;
+            --grey-light: #D0D1D1;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                margin: 0; /*para eliminar las margenes se le pone valor 0*/
+                padding: 0; /**/
+                background: var(--blue-body);
+                font-family: "Varela Round", sans-serif; /*font-family sirve para el estilo de letra o fuente*/
+            }
+
+            .login-box {
+                min-width: 300px; /*para ajustar el ancho*/
+                height: auto; /*para ajutar el alto*/
+                background: white; /*para dar color al panel donde va el login*/
+                color: var(--blue-body); /*para dar color al texto*/
+                top: 60%; /*para que este centrado*/
+                left: 50%; /* para que este centrado el panel*/
+                position: absolute;
+                transform: translate(-50%, -50%);
+                box-sizing: border-box;
+                padding: 10px 20px;
+                box-shadow: 0 .5rem 1rem #aea6a4 !important;
+                /*para darle un difuminado blanco*/
+                font-family: "Varela Round", sans-serif;
+                border-radius: 1.0rem;
+            }
+
+                .login-box h1 {
+                    margin: 0;
+                    padding: 30px;
+                    text-align: center;
+                    font-size: 18px;
+                    color: var(--blue-body);
+                    font-family: "Varela Round", sans-serif;
+                }
+
+                .login-box label {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                    display: block;
+                    font-family: "Varela Round", sans-serif;
+                    font-size: 150%;
+                }
+
+                .login-box input {
+                    width: 90%;
+                    margin-bottom: 30px;
+                    font-family: "Varela Round", sans-serif;
+                    cursor: pointer;
+                }
+
+                    .login-box input[type="text"],
+                    .login-box input[type="password"] {
+                        border: none; /*para quitarles el borde */
+                        border-bottom: 1px solid #fff;
+                        background: transparent;
+                        outline: none;
+                        height: 40px;
+                        color: var(--blue-body);
+                        font-size: 16px;
+                        font-size: 13px;
+                    }
+
+                .login-box .btn-form {
+                    border: none;
+                    outline: none;
+                    height: 30px;
+                    width: 60%;
+                    font-size: 18px;
+                    border-radius: 20px;
+                    background-color: var(--blue-body);
+                    color: white;
+                    margin-left: 20%;
+                    text-align: center;
+                }
+
+                .login-box a {
+                    font-size: 1.0rem;
+                    line-height: 30px;
+                    color: var(--blue-body);
+                    font-weight: bold;
+                }
+
+                    .login-box a:hover {
+                        color: var(--blue-body);
+                        font-size: 1.2rem;
+                        border-radius: 0.3rem;
+                        text-decoration: none;
+                    }
+
+                .login-box .login-userIcono {
+                    position: absolute;
+                    background-image: url(./imgs/user.png);
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 10px;
+                    background-size: cover;
+                    background-position: center;
+                    top: -30px;
+                    left: calc(50% - 30px);
+                    border: none;
+                }
+
+            .modalDialogSetupBox {
+                background-color: rgba(0,0,0,0.25);
+                z-index: 2;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+                position: fixed;
+                display: block;
+            }
+
+            .panel-restorePassword {
+                top: 50px;
+                margin-left: -120px;
+                left: 50%;
+                width: 250px;
+                height: 200px;
+                z-index: 2;
+                position: absolute;
+                padding-bottom: 5px;
+                border-radius: 8px 8px 8px 8px;
+                -webkit-border-radius: 8px 8px 8px 8px;
+                background-color: white;
+                box-shadow: 0px 0px 15px rgba(0,0,0,0.15),0px 0px 1px 1px rgba(0,0,0,0.1);
+                font-family: 'Helvetica Neue',sans-serif;
+                background-attachment: initial, initial;
+                background-origin: initial, initial;
+                background-clip: initial, initial;
+                background-size: initial, initial;
+                clear: both;
+                display: block;
+                background-position: 0% 0px;
+                background-repeat: repeat-x;
+            }
+
+            .modal-body-pasword {
+                right: 0px;
+                width: auto;
+                height: auto;
+                bottom: 0px;
+                color: #08C;
+                margin: 0px;
+                position: relative;
+                float: right;
+                margin-right: 10px;
+                font-weight: bold;
+                padding: 2px 5px;
+                border: 1px solid #aaa;
+                border-radius: 4px;
+                letter-spacing: 0px;
+                font-size: 11px;
+                line-height: 1.4em;
+                text-align: center;
+                cursor: pointer;
+                top: 0px
+            }
+
+            .modalDialogSetupBox-label {
+                color: #333;
+                font-size: 11px;
+                font-weight: bold;
+            }
+
+            .btn-update {
+                text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                text-decoration: none;
+                font-family: 'Helvetica Neue', Helvetica, sans-serif;
+                cursor: pointer;
+                font-size: 12px;
+                display: inline-block;
+                padding: 4px 6px;
+                white-space: nowrap;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 100px;
+                /* margin: 8px 5px; */
+                transition: all 0.2s ease-in-out;
+                background: #2a67d5;
+                color: whitesmoke;
+                box-shadow: 0px 5px 0px 0px #044fac;
+            }
+
+            .table-body {
+                padding: 10px 8px 15px;
+                height: auto;
+            }
+        }
+
+
+        @media(min-width: 480px) {
+            body {
+                margin: 0; /*para eliminar las margenes se le pone valor 0*/
+                padding: 0; /**/
+                background: var(--blue-body);
+                font-family: "Varela Round", sans-serif; /*font-family sirve para el estilo de letra o fuente*/
+            }
+
+            .login-box {
+                width: 520px; /*para ajustar el ancho*/
+                height: auto; /*para ajutar el alto*/
+                background: white; /*para dar color al panel donde va el login*/
+                color: var(--blue-body); /*para dar color al texto*/
+                top: 50%; /*para que este centrado*/
+                left: 50%; /* para que este centrado el panel*/
+                position: absolute;
+                transform: translate(-50%, -50%);
+                box-sizing: border-box;
+                padding: 20px 50px;
+                box-shadow: 0 .5rem 1rem #aea6a4 !important;
+                /*para darle un difuminado blanco*/
+                font-family: "Varela Round", sans-serif;
+                border-radius: 1.0rem;
+            }
+
+                .login-box h1 {
+                    margin: 0;
+                    padding: 30px;
+                    text-align: center;
+                    font-size: 22px;
+                    color: var(--blue-body);
+                    font-family: "Varela Round", sans-serif;
+                }
+
+                .login-box label {
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                    display: block;
+                    font-family: "Varela Round", sans-serif;
+                    font-size: 200%;
+                }
+
+                .login-box input {
+                    width: 90%;
+                    margin-bottom: 20px;
+                    font-family: "Varela Round", sans-serif;
+                    cursor: pointer;
+                }
+
+                    .login-box input[type="text"],
+                    .login-box input[type="password"] {
+                        border: none; /*para quitarles el borde */
+                        border-bottom: 1px solid #fff;
+                        background: transparent;
+                        outline: none;
+                        height: 40px;
+                        color: var(--blue-body);
+                        font-size: 16px;
+                    }
+
+                .login-box .btn-form {
+                    border: none;
+                    outline: none;
+                    height: 40px;
+                    width: 60%;
+                    font-size: 18px;
+                    border-radius: 20px;
+                    background-color: var(--blue-body);
+                    color: white;
+                    margin-left: 20%;
+                    text-align: center;
+                }
+
+                .login-box a {
+                    font-size: 1.0rem;
+                    line-height: 30px;
+                    color: var(--blue-body);
+                    font-weight: bold;
+                }
+
+                    .login-box a:hover {
+                        color: var(--blue-body);
+                        font-size: 1.2rem;
+                        border-radius: 0.3rem;
+                        text-decoration: none; /*para quitarle la decoracion por defecto al texto, osea el subrayado*/
+                    }
+
+                .login-box .login-userIcono {
+                    position: absolute;
+                    background-image: url(./imgs/user.png);
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    margin-bottom: 10px;
+                    background-size: cover;
+                    background-position: center;
+                    top: -30px;
+                    left: calc(50% - 25px);
+                    border: none;
+                }
+
+            .span {
+                position: relative;
+                top: 3px;
+                left: 150px;
+                right: 10px;
+                height: 23px;
+                font-family: 'Helvetica Neue',sans-serif;
+                font-weight: 300;
+                line-height: 1.2;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+
+            .modalDialogSetupBox {
+                background-color: rgba(0,0,0,0.25);
+                z-index: 2;
+                left: 0px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+                position: fixed;
+                display: block;
+            }
+
+            .panel-restorePassword {
+                top: 30px;
+                margin-left: -250px;
+                left: 50%;
+                width: 500px;
+                height: 200px;
+                z-index: 2;
+                position: absolute;
+                padding-bottom: 5px;
+                border-radius: 8px 8px 8px 8px;
+                -webkit-border-radius: 8px 8px 8px 8px;
+                background-color: white;
+                box-shadow: 0px 0px 15px rgba(0,0,0,0.15),0px 0px 1px 1px rgba(0,0,0,0.1);
+                font-family: 'Helvetica Neue',sans-serif;
+                background-attachment: initial, initial;
+                background-origin: initial, initial;
+                background-clip: initial, initial;
+                background-size: initial, initial;
+                clear: both;
+                display: block;
+                background-position: 0% 0px;
+                background-repeat: repeat-x;
+            }
+
+            .modal-body-pasword {
+                right: 0px;
+                width: auto;
+                bottom: 0px;
+                color: #08C;
+                margin: 0px;
+                position: relative;
+                float: right;
+                margin-right: 10px;
+                font-weight: bold;
+                padding: 2px 5px;
+                border: 1px solid #aaa;
+                border-radius: 4px;
+                letter-spacing: 0px;
+                font-size: 11px;
+                line-height: 1.4em;
+                text-align: center;
+                cursor: pointer;
+                top: 0px
+            }
+
+            .modalDialogSetupBox-label {
+                color: #333;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+            .btn-update {
+                text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                text-decoration: none;
+                font-family: 'Helvetica Neue', Helvetica, sans-serif;
+                cursor: pointer;
+                font-size: 14px;
+                display: inline-block;
+                padding: 4px 6px;
+                white-space: nowrap;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 100px;
+                margin: 8px 5px;
+                -webkit-transition: all 0.2s ease-in-out;
+                -ms-transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                background: #2a67d5;
+                color: whitesmoke;
+                box-shadow: 0px 5px 0px 0px #044fac;
+            }
+        }
+    </style>
+
+    <script language="javascript" type="text/javascript">
+
+        var prospectId = "";
+        let cloneProspectId;
+        var companyId = "";
+        var companyCode = "";
+        var probability;
+        //var urlApiLocal = "http://localhost:50345";
+        //var urlApiProduc = "https://api.smart-home.com.co";
+        //var urlLocalManage = "http://localhost:65408";
+        var urlLocalManage = "https://manage.smart-home.com.co/CustomerExperiences";
+
+        var DATE_FORMAT = "MM/DD/YYYY";
+        var CALENDAR_DATE_FORMAT = "%m/%d/%Y";
+
+        if (window.addEventListener) {
+            window.addEventListener("load", initialize, false);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent("onload", initialize, false);
+        }
+
+        function getUrlParameterValue(parameter) {
+            parameter = parameter.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + parameter + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+
+
+        function initialize() {
+            companyCode = getUrlParameterValue("companyCode");
+
+            if (companyId != "00000000-0000-0000-0000-000000000000") {
+
+            }
+
+        }       
+
+        //validación de credenciales para el ingreso
+        async function getLogin() {
+
+            var user = document.getElementById("txtUser");
+            var password = document.getElementById("txtPassword");
+            if (user.value.length >= 3 && password.value.length >= 3) {
+                var data = {
+                    User: document.getElementById("txtUser").value,
+                    Password: document.getElementById("txtPassword").value,
+                };
+
+                let Logueo = await fetch(urlLocalManage + '/CustomerExperienceApi.ashx?action=login&companyCode=' + companyCode, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Credentials': 'true',
+
+                    },
+                    method: "POST",
+                    body: JSON.stringify(data)
+
+
+                });
+                let resultLogueo = await Logueo.json();
+                probability = resultLogueo[0].Probability;
+                checkCookies(resultLogueo);
+                loadmodules(resultLogueo);
+            }
+            else {
+                alert("Debe ingresar usuario y contrase�a");
+            }
+        }
+        //se crea una cookie para guardar el prospectId
+        function checkCookies(resultLogueo) {
+           
+            createCookie("sessionLogin", resultLogueo[0].ProspectId, 1);
+            createCookie("sessionIdentificationNumber", resultLogueo[0].IdentificationNumber, 1);
+            createCookie("sessionCompanyCode", companyCode, 1);
+           
+            var displaySessionCookie = readCookie("sessionLogin");
+            var displaySessionId = readCookie("sessionIdentificationNumber");
+
+
+            console.log(displaySessionCookie, displaySessionId);
+        }
+
+        //se alimenta la lista desplegable para que el cliente seleccione el modulo por le que quiere ingresar
+        function loadmodules(resultLogueo) {
+            var ddlModules = document.getElementById("ddlModules");
+            for (var i = 0; i < resultLogueo.length; i++) {
+                var option = document.createElement("option");
+                option.setAttribute("value", resultLogueo[i].ProjectId);
+                option.innerHTML = resultLogueo[i].Module;
+                ddlModules.appendChild(option);
+            }
+
+        }
+        //validación para ingresar
+        function getPanelCustomer() {
+
+            var ddlModules = document.getElementById("ddlModules");
+            if (probability == 100) {
+                if (ddlModules.selectedIndex > -1) {
+                    window.open("./PanelCustomerExperience.html");
+                    window.close();
+
+                } else {
+                    alert("Debe seleccionar algún inmueble de la lista desplegable.");
+                }
+            } else {
+                alert("Aún no tiene acceso autorizado");
+            }
+        }
+        //abre la ventana de restablecer contraseña
+        function showModalSetupBox() {
+            var modalDialogSetupBox = document.getElementById("modalDialogSetupBox");
+            var displaySessionCookie = readCookie("sessionLogin");
+            if (modalDialogSetupBox.style.display == "none") {
+                modalDialogSetupBox.style.display = "block"
+            }
+
+        }
+        function closeWindow() {
+            var modalDialogSetupBox = document.getElementById("modalDialogSetupBox");
+            modalDialogSetupBox.style.display = "none";
+        }
+
+        //se envia el correo para que le lleguen las nuevas credenciales de acceso
+        async function restoreCredentials() {
+            var email = document.getElementById("restoreCredentialsEmail").value;
+
+            var data = {
+                email: email,
+            };
+            let Update = await fetch(urlLocalManage + '/CustomerExperienceApi.ashx?action=updateAccess&companyCode=' + companyCode, {
+                method: "POST",
+                body: JSON.stringify(data)
+
+
+            });
+            let resultUpdateCredentials = await Update.json();
+            alert(resultUpdateCredentials)
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="login-content">
+
+        <div class="login-box">
+            <span class="login-userIcono"></span>
+            <h1>INICIAR SESIÓN</h1>
+            <form>
+
+                <!--user name-->
+                <label for="username"><span class="fa fa-user"></span></label>
+                <input type="text" placeholder="ingrese su usuario" id="txtUser">
+
+                <!--password-->
+                <label for="password">
+                    <span class="fa fa-lock"></span>
+                </label>
+                <input type="password" id="txtPassword" placeholder="ingrese su contraseña">
+
+                <div class="btn-form" onclick="getLogin();">Consultar</div><br />
+
+                <div>
+                    <select id="ddlModules" style="width: 92%; border-color: #1561a4; border-radius: 0.2rem;"></select><br /><br />
+                    <div class="btn-form" onclick="getPanelCustomer()">Ingresar</div>
+                    <br />
+                    <a onclick="showModalSetupBox()">Olvido su contraseña?</a><br />
+                    <a href="./ResgisterCustomerExperience.html">Registrarse aquí, si aún no tiene cuenta.</a>
+                </div>
+
+            </form>
+
+            <div id="modalDialogSetupBox" style="display:none">
+                <div class="body-modalDialogSetupBox">
+                    <div id="modalDialogSetupBox" class="modalDialogSetupBox">
+                        <div class="panel-restorePassword">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td colspan="2" style="height: 35px; border-bottom: 1px solid #cfcfcf;">
+                                        <span id="Span6" class="span">Olvido su contraseña?</span>
+                                        <div class="modal-body-pasword"
+                                             onclick="closeWindow();">
+                                            X
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" valign="top" style="width: 100%; padding-right: 5px; padding-left: 5px;">
+                                        <div style="line-height: 17px; height: 500px;">
+                                            <table style="margin: 0 auto; line-height: 22px; font-size: 12px; width: 100%">
+                                                <tr>
+                                                    <td>
+                                                        <div>
+                                                            <div class="table-body">
+                                                                <table align="center" cellpadding="0" cellspacing="0" border="0" width="100%" style="border: 0px; background-color: #ffffff; webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); margin: 0 auto; color: #2E2E2E; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; -webkit-border-radius: 5px; -moz-border-radius: 1px; border-radius: 1px; box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4), 0 1px 4px rgba(0, 0, 0, 0.4); -webkit-border-radius: 12px; -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4), 0 1px 4px rgba(0, 0, 0, 0.4); -moz-border-radius: 12px; -moz-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4), 0 1px 4px rgba(0,0,0,0.4); padding: 10px;">
+                                                                    <tr>
+                                                                        <td>
+
+                                                                            <table style="width: 100%;">
+
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <span class="modalDialogSetupBox-label">Digite el correo del registro</span>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                                                                                            <input type="text" runat="server" id="restoreCredentialsEmail" style="border-bottom:1px solid var(--grey-light)" />
+                                                                                        </div>
+
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                            </table>
+                                                                            <table style="width: 100%; table-layout: fixed;">
+                                                                                <tr>
+                                                                                    <td style="text-align: center;">
+                                                                                        <div class="btn-update" id="lnkSend" onclick="restoreCredentials();">Enviar</div><br /><br />
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

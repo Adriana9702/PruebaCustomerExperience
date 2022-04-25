@@ -1,0 +1,2178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/968e25fcd3.js" crossorigin="anonymous"></script>
+
+    <title>Commercial Customer Experience</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Dongle&family=Inconsolata:wght@800&family=Inter:wght@300;500&family=Varela+Round&display=swap"
+          rel="stylesheet">
+    <script src="JavaScript/cookieManagement.js" type="text/javascript"></script>
+    <script src="JavaScript/dateFormat.js" type="text/javascript"></script>
+    <style type="text/css">
+        :root {
+            --blue-body: #1561A4;
+            --grey-dark: #A1A1A1;
+            --grey-light: #D0D1D1;
+            --blue-light: rgb(0 162 255);
+            --color: #1e91ed;
+        }
+
+        header {
+            width: 100%;
+            align-content: center;
+            scroll-snap-align: center;
+            margin: 0 auto;
+        }
+
+        .divheader {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            top: 30%;
+            margin: 0px auto;
+            padding: 7px;
+            scroll-snap-align: center;
+            text-align: center;
+            background-color: var(--blue-body);
+        }
+
+        .body-panel {
+            position: relative;
+            width: 60%;
+            min-width: 320px;
+            max-width: 820px;
+            height: auto;
+            top: 30%;
+            margin: 0 auto;
+            scroll-snap-align: center;
+            text-align: center;
+            background-color: white;
+        }
+
+        .menu {
+            height: auto;
+            display: flex;
+            overflow-x: auto;
+            overflow-y: hidden;
+            color: var(--blue-body);
+            position: relative;
+            width: 97%;
+            padding: 2%;
+        }
+
+            .menu ::-webkit-scrollbar {
+                display: none;
+            }
+
+            .menu .card a {
+                text-decoration: none;
+                text-overflow: ellipsis;
+            }
+
+            .menu .card:hover {
+                animation: slidebg 2s linear infinite;
+            }
+
+        @media (max-width: 464px) {
+
+            .divheader p {
+                font-family: "Varela Round", sans-serif;
+                color: white;
+                font-stretch: condensed;
+                font-size: 13px;
+                text-align: center;
+                margin-left: 30%;
+                font-weight: bold;
+            }
+
+
+            .imgProject {
+                width: 28%;
+                min-width: 80px;
+                height: 80px;
+                border-radius: 9.0rem;
+                margin-left: 20%;
+            }
+
+
+            .body-quotation {
+                width: 100%;
+                min-width: 310px;
+                max-width: 910px;
+                font-family: "Varela Round", sans-serif;
+                padding: 7%;
+            }
+
+            .ModuleDetail {
+                /*width: 100%;*/
+                padding: 1%;
+                box-shadow: 0 2px 14px 2px rgb(210 210 210);
+                border-radius: 0.5rem;
+                font-family: "Varela Round", sans-serif;
+                font-size: 11px;
+                padding: 2%;
+            }
+
+                .ModuleDetail i {
+                    float: right;
+                    color: var(--blue-body);
+                    font-size: 13px;
+                }
+            /* .tdStyle {
+
+                font-family: "Varela Round", sans-serif;
+                font-size: 11px;
+            }*/
+            /*-----------------------------------*/
+            .menu .card {
+                min-width: 90px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: white;
+                margin-right: 5%;
+                font-size: 12px;
+                font-weight: bold;
+                box-shadow: 0px 2px 8px rgb(120 120 120);
+                border-radius: 21px 24px 21px 0;
+                font-family: "Varela Round", sans-serif;
+            }
+
+
+            .btn {
+                border: none;
+                outline: none;
+                height: 30px;
+                width: 50%;
+                font-size: 16px;
+                border-radius: 20px;
+                background-color: var(--blue-body);
+                color: white;
+                line-height: 15px;
+                font-family: "Varela Round", sans-serif;
+                text-align: center;
+            }
+
+                .btn:hover {
+                    color: white;
+                    font-weight: bold;
+                }
+
+            .calendar {
+                margin-right: auto;
+                margin-left: auto;
+                display: none;
+                padding-right: 15px;
+                padding-left: 15px;
+                width: 100%;
+                background: #fff;
+                border-radius: 1em;
+                padding-top: 15px;
+                border: 2px solid var(--blue-body);
+                height: 260px;
+                font-family: "Varela Round", sans-serif;
+            }
+
+            .calendarContainer {
+                width: 95%;
+                table-layout: fixed;
+                border-collapse: separate;
+                border-spacing: 4px;
+            }
+
+            .btn-cita {
+                padding-bottom: 2px;
+                cursor: pointer;
+                color: #36C;
+                font-size: 12px;
+                color: white;
+                border-radius: 20px;
+                border-top: solid 1px #95cfe7;
+                background: var(--blue-body);
+                font-weight: 400;
+                font-family: "Varela Round", sans-serif;
+                text-decoration: none;
+                vertical-align: middle;
+                cursor: pointer;
+                padding: 9px;
+                text-align: center;
+                width: 200px;
+                margin: 0 auto;
+            }
+
+            .styleImageModule {
+                width: 60%;
+                height: 180px;
+                padding: 2%;
+            }
+
+            .styleImageContent {
+                scroll-snap-type: x proximity;
+                /* display: flex;*/
+                /*overflow-x: scroll;*/
+                overflow-y: hidden;
+                overscroll-behavior-x: contain;
+            }
+
+            .exit {
+                color: white;
+                font-size: 20px;
+                background-color: var(--blue-body);
+                border: none;
+                outline: none;
+            }
+
+            .pse {
+                float: left;
+                position: fixed;
+                left: 8%;
+                top: 85%;
+                z-index: 700;
+            }
+
+            .whatsapp {
+                float: right;
+                position: fixed;
+                right: 6%;
+                top: 90%;
+                z-index: 900;
+                font-size: 8px;
+            }
+
+            .whatsappImg {
+                width: 40px;
+                height: 40px;
+            }
+
+            #contenedor_carga {
+                background-color: rgba(216, 215, 215 0.9);
+                height: 20%;
+                width: 20%;
+                top: 40%;
+                left: 35%;
+                position: fixed;
+                -webkit-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+                z-index: 10000;
+            }
+
+            #carga {
+                border: 15px solid #ccc;
+                border-top-color: var(--blue-body);
+                border-top-style: groove;
+                height: 100px;
+                width: 100px;
+                border-radius: 100%;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                -webkit-animation: girar 1.5s linear infinite;
+                -o-animation: girar 1.5s linearin infinite;
+                animation: girar 1.5s linear infinite;
+            }
+
+            @keyframes girar {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            /*dia actual*/
+            .calendarCurrentDay {
+                background-color: var(--blue-light / 3%);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                width: 38px;
+                height: 12px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 10px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: var(--blue-light);
+                border-bottom: 1px solid;
+                cursor: pointer;
+            }
+
+            .calendarNextDay {
+                background-color: var(--blue-light / 3%);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                width: 38px;
+                height: 12px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 10px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: var(--blue-light);
+                cursor: pointer;
+            }
+
+            .calendarDay {
+                width: 38px;
+                height: 12px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 10px;
+                text-align: center;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                color: #0000006b;
+            }
+            /*dia que se selecciona del calendario*/
+            .calendarSelected {
+                background-color: var(--blue-light);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                width: 38px;
+                height: 12px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 10px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            /* --titulo del calendario*/
+            .calendarMonthTitle {
+                font-family: "Varela Round", sans-serif;
+                font-size: 12px;
+                line-height: 1.5;
+                color: var(--blue-body);
+                word-break: break-word;
+                word-wrap: break-word;
+                -webkit-font-smoothing: antialiased;
+            }
+            /*imagenes de sigiente o anterior mes*/
+            .calendarMonthChanger {
+                justify-content: center;
+                align-items: center;
+                height: 34px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            /*nombre de los dias y el mes*/
+            .calendarHeader {
+                font-family: "Varela Round", sans-serif;
+                font-size: 11px;
+                line-height: 1.5;
+                color: #4d5055;
+                word-break: break-word;
+                overflow-wrap: break-word;
+                -webkit-font-smoothing: antialiased;
+                text-align: center;
+                color: var(--blue-body);
+                font-weight: bold;
+            }
+
+            .hourContainer {
+                height: 20px;
+                color: var(--grey-dark);
+                cursor: pointer;
+                width: 40px;
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 9px;
+                line-height: 18px;
+                border: 1px solid;
+                border-radius: 4px;
+                font-size: 10px;
+                font-weight: bold;
+                justify-content: center;
+                padding: 0 8px;
+                position: relative;
+                text-align: center;
+                text-shadow: none;
+                vertical-align: middle;
+            }
+
+            .hourSelected {
+                background-color: var(--blue-body);
+                color: white;
+                height: 20px;
+                cursor: pointer;
+                width: 42px;
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 9px;
+                line-height: 18px;
+                border: 1px solid;
+                border-radius: 2px;
+                font-size: 10px;
+                font-weight: bold;
+                justify-content: center;
+                padding: 0 8px;
+                position: relative;
+                vertical-align: middle;
+            }
+
+            .hourList {
+                padding: 2px;
+                text-align: center;
+                line-height: 18px;
+            }
+        }
+
+
+        @media (min-width: 465px) {
+
+            .divheader p {
+                font-family: "Varela Round", sans-serif;
+                color: white;
+                font-stretch: condensed;
+                font-weight: bold;
+                font-size: 15px;
+                text-align: center;
+                margin-left: 40%;
+                font-weight: bold;
+            }
+
+            .imgProject {
+                width: 30%;
+                min-width: 90px;
+                height: 90px;
+                border-radius: 9.0rem;
+                margin-left: 30%;
+            }
+
+
+            .body-quotation {
+                width: 100%;
+                min-width: 310px;
+                max-width: 910px;
+                font-family: "Varela Round", sans-serif;
+                padding: 7%;
+            }
+
+
+
+            /*.tdStyle {
+
+                font-family: "Varela Round", sans-serif;
+                font-size: 13px;
+            }*/
+            .ModuleDetail {
+                /* width: 100%;*/
+                padding: 1%;
+                box-shadow: 0 2px 14px 2px rgb(210 210 210);
+                border-radius: 0.5rem;
+                font-family: "Varela Round", sans-serif;
+                font-size: 14px;
+                padding: 2%;
+            }
+
+                .ModuleDetail i {
+                    float: right;
+                    color: var(--blue-body);
+                    font-size: 16px;
+                }
+            /*-----------------------------------*/
+            .menu .card {
+                min-width: 95px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: white;
+                margin-right: 5%;
+                box-shadow: 0px 2px 8px rgb(120 120 120);
+                font-weight: bold;
+                border-radius: 22px 25px 22px 0;
+                font-family: "Varela Round", sans-serif;
+                font-size: 14px;
+                color: var(--blue-body);
+            }
+
+            .btn {
+                border: none;
+                outline: none;
+                height: 30px;
+                width: 45%;
+                font-size: 18px;
+                border-radius: 20px;
+                background-color: var(--blue-body);
+                color: white;
+                line-height: 15px;
+                text-align: center;
+            }
+
+                .btn:hover {
+                    color: white;
+                    font-weight: bold;
+                }
+
+            .calendar {
+                margin-right: auto;
+                margin-left: auto;
+                display: none;
+                padding-right: 15px;
+                padding-left: 15px;
+                width: 100%;
+                background: #fff;
+                border-radius: 1em;
+                padding-top: 15px;
+                border: 2px solid var(--blue-body);
+                height: 280px;
+                font-family: "Varela Round", sans-serif;
+            }
+
+            .calendarContainer {
+                width: 95%;
+                table-layout: fixed;
+                border-collapse: separate;
+                border-spacing: 4px;
+            }
+
+            .btn-cita {
+                padding-bottom: 2px;
+                cursor: pointer;
+                color: #36C;
+                font-size: 12px;
+                color: white;
+                border-radius: 20px;
+                border-top: solid 1px #95cfe7;
+                background: var(--blue-body);
+                font-weight: 400;
+                font-family: "Varela Round", sans-serif;
+                text-decoration: none;
+                vertical-align: middle;
+                cursor: pointer;
+                padding: 9px;
+                text-align: center;
+                width: 200px;
+                margin: 0 auto;
+            }
+
+            .styleImageModule {
+                width: 70%;
+                height: 300px;
+                padding: 2%;
+            }
+
+            .styleImageContent {
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+
+            .exit {
+                color: white;
+                font-size: 25px;
+                background-color: var(--blue-body);
+                border: none;
+                outline: none;
+            }
+
+            .whatsapp {
+                float: right;
+                position: fixed;
+                right: 20%;
+                top: 85%;
+                z-index: 900;
+                font-size: 12px;
+            }
+
+            .pse {
+                float: left;
+                position: fixed;
+                left: 15%;
+                top: 85%;
+                z-index: 700;
+            }
+
+            .whatsappImg {
+                width: 50px;
+                height: 50px;
+            }
+
+            #contenedor_carga {
+                background-color: rgba(216, 215, 215 0.9);
+                height: 30%;
+                width: 30%;
+                top: 40%;
+                left: 35%;
+                position: fixed;
+                -webkit-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+                z-index: 10000;
+            }
+
+            #carga {
+                border: 15px solid #ccc;
+                border-top-color: var(--blue-body);
+                border-top-style: groove;
+                height: 100px;
+                width: 100px;
+                border-radius: 100%;
+                position: absolute;
+                /*right: 0;
+                bottom: 0;*/
+                margin: auto;
+                -webkit-animation: girar 1.5s linear infinite;
+                -o-animation: girar 1.5s linearin infinite;
+                animation: girar 1.5s linear infinite;
+            }
+
+            @keyframes girar {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            /*dia actual*/
+            .calendarCurrentDay {
+                background-color: var(--blue-light / 3%);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                width: 40px;
+                height: 14px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 12px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: var(--blue-light);
+                border-bottom: 1px solid;
+                cursor: pointer;
+            }
+
+            .calendarNextDay {
+                background-color: var(--blue-light / 3%);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                width: 40px;
+                height: 14px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 12px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: var(--blue-light);
+                cursor: pointer;
+            }
+
+            .calendarDay {
+                width: 40px;
+                height: 14px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 12px;
+                text-align: center;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                color: #0000006b;
+            }
+            /*dia que se selecciona del calendario*/
+            .calendarSelected {
+                background-color: var(--blue-light);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                width: 40px;
+                height: 14px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 12px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+            /* --titulo del calendario*/
+            .calendarMonthTitle {
+                font-family: "Varela Round", sans-serif;
+                font-size: 13px;
+                line-height: 1.5;
+                color: var(--blue-body);
+                word-break: break-word;
+                word-wrap: break-word;
+                -webkit-font-smoothing: antialiased;
+            }
+            /*imagenes de sigiente o anterior mes*/
+            .calendarMonthChanger {
+                justify-content: center;
+                align-items: center;
+                height: 38px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            /*nombre de los dias y el mes*/
+            .calendarHeader {
+                font-family: "Varela Round", sans-serif;
+                font-size: 11px;
+                line-height: 1.5;
+                color: #4d5055;
+                word-break: break-word;
+                overflow-wrap: break-word;
+                -webkit-font-smoothing: antialiased;
+                text-align: center;
+                color: var(--blue-body);
+                font-weight: bold;
+            }
+
+            .hourContainer {
+                height: 20px;
+                color: var(--grey-dark);
+                cursor: pointer;
+                width: 50px;
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 9px;
+                line-height: 20px;
+                border: 1px solid;
+                border-radius: 2px;
+                font-size: 10px;
+                font-weight: bold;
+                justify-content: center;
+                padding: 0 8px;
+                position: relative;
+                text-align: center;
+                text-shadow: none;
+                vertical-align: middle;
+            }
+
+            .hourSelected {
+                background-color: var(--blue-body);
+                color: white;
+                height: 23px;
+                cursor: pointer;
+                width: 52px;
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 9px;
+                line-height: 20px;
+                border: 1px solid;
+                border-radius: 2px;
+                font-size: 12px;
+                font-weight: bold;
+                justify-content: center;
+                padding: 0 8px;
+                position: relative;
+                vertical-align: middle;
+            }
+
+            .hourList {
+                padding: 2px;
+                text-align: center;
+                line-height: 20px;
+            }
+        }
+
+        @media (min-width: 750px) {
+
+            .divheader p {
+                font-family: "Varela Round", sans-serif;
+                color: white;
+                font-stretch: condensed;
+                font-weight: bold;
+                font-size: 24px;
+                text-align: center;
+                margin-left: 40%;
+                font-weight: bold;
+            }
+
+            .imgProject {
+                width: 30%;
+                min-width: 90px;
+                height: 90px;
+                border-radius: 9.0rem;
+                margin-left: 60%;
+            }
+
+
+            .body-quotation {
+                width: 100%;
+                min-width: 310px;
+                max-width: 910px;
+                font-family: "Varela Round", sans-serif;
+                padding: 7%;
+            }
+
+
+
+            .TaskName {
+                width: 100%;
+                padding: 1%;
+                box-shadow: 0 2px 14px 2px rgb(210 210 210);
+            }
+            /*-----------------------------------*/
+            .menu .card {
+                min-width: 95px;
+                max-width: 100px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: white;
+                margin-right: 3%;
+                box-shadow: 0px 2px 8px rgb(120 120 120);
+                font-weight: bold;
+                border-radius: 22px 25px 22px 0;
+                font-family: "Varela Round", sans-serif;
+                font-size: 18px;
+            }
+
+            .ModuleDetail {
+                /* width: 100%;*/
+                padding: 1%;
+                box-shadow: 0 2px 14px 2px rgb(210 210 210);
+                border-radius: 0.5rem;
+                font-family: "Varela Round", sans-serif;
+                font-size: 16px;
+            }
+
+                .ModuleDetail i {
+                    float: right;
+                    color: var(--blue-body);
+                    font-size: 18px;
+                    padding: 2%;
+                }
+
+            .btn {
+                border: none;
+                outline: none;
+                height: 30px;
+                width: 45%;
+                font-size: 18px;
+                border-radius: 20px;
+                background-color: var(--blue-body);
+                color: white;
+                line-height: 15px;
+                text-align: center;
+            }
+
+                .btn:hover {
+                    color: white;
+                    font-weight: bold;
+                }
+
+            .calendar {
+                margin-right: auto;
+                margin-left: auto;
+                display: none;
+                padding-right: 15px;
+                padding-left: 15px;
+                width: 100%;
+                background: #fff;
+                border-radius: 1em;
+                padding-top: 15px;
+                border: 2px solid var(--blue-body);
+                height: 290px;
+                font-family: "Varela Round", sans-serif;
+            }
+
+            .calendarContainer {
+                width: 95%;
+                table-layout: fixed;
+                border-collapse: separate;
+                border-spacing: 4px;
+            }
+
+            .btn-cita {
+                padding-bottom: 2px;
+                cursor: pointer;
+                color: #36C;
+                font-size: 12px;
+                color: white;
+                border-radius: 20px;
+                border-top: solid 1px #95cfe7;
+                background: var(--blue-body);
+                font-weight: 400;
+                font-family: "Varela Round", sans-serif;
+                text-decoration: none;
+                vertical-align: middle;
+                cursor: pointer;
+                padding: 9px;
+                text-align: center;
+                width: 200px;
+                margin: 0 auto;
+            }
+
+            .styleImageModule {
+                width: 70%;
+                height: 300px;
+                padding: 2%;
+            }
+
+            .styleImageContent {
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+
+            .exit {
+                color: white;
+                font-size: 30px;
+                background-color: var(--blue-body);
+                border: none;
+                outline: none;
+            }
+
+            .pse {
+                float: left;
+                position: fixed;
+                left: 15%;
+                top: 85%;
+                z-index: 700;
+            }
+
+            .whatsapp {
+                float: right;
+                position: fixed;
+                right: 20%;
+                top: 85%;
+                z-index: 900;
+                font-size: 12px;
+            }
+
+            .whatsappImg {
+                width: 60px;
+                height: 60px;
+            }
+
+            #contenedor_carga {
+                background-color: rgba(216, 215, 215 0.9);
+                height: 30%;
+                width: 30%;
+                position: fixed;
+                top: 40%;
+                left: 35%;
+                -webkit-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+                z-index: 10000;
+            }
+
+            #carga {
+                border: 15px solid #ccc;
+                border-top-color: var(--blue-body);
+                border-top-style: groove;
+                height: 100px;
+                width: 100px;
+                border-radius: 100%;
+                position: absolute;
+                top: 0%;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                -webkit-animation: girar 1.5s linear infinite;
+                -o-animation: girar 1.5s linearin infinite;
+                animation: girar 1.5s linear infinite;
+            }
+
+            @keyframes girar {
+                from {
+                    transform: rotate(0deg);
+                }
+
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .calendarCurrentDay {
+                background-color: var(--blue-light / 3%);
+                border: 1px solid transparent;
+                border-radius: 2px;
+                width: 44px;
+                height: 16px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 14px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: var(--blue-light);
+                border-bottom: 1px solid;
+                cursor: pointer;
+            }
+
+            .calendarNextDay {
+                background-color: var(--blue-light / 3%);
+                border: 1px solid transparent;
+                border-radius: 2px;
+                width: 44px;
+                height: 16px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 14px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: var(--blue-light);
+                cursor: pointer;
+            }
+
+            .calendarDay {
+                width: 44px;
+                height: 16px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 14px;
+                text-align: center;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                color: #0000006b;
+            }
+
+            .calendarSelected {
+                background-color: var(--blue-light);
+                border: 1px solid transparent;
+                border-radius: 4px;
+                width: 44px;
+                height: 16px;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1px 0 0;
+                font-size: 14px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+            }
+
+            .hourSelected {
+                background-color: var(--blue-body);
+                color: white;
+                height: 23px;
+                cursor: pointer;
+                width: 150px;
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 9px;
+                line-height: 23px;
+                border: 1px solid;
+                border-radius: 2px;
+                font-size: 12px;
+                font-weight: bold;
+                justify-content: center;
+                padding: 0 8px;
+                position: relative;
+                vertical-align: middle;
+            }
+
+            .hourList {
+                padding: 4px;
+                text-align: center;
+                line-height: 27px;
+            }
+            /* --titulo del calendario*/
+            .calendarMonthTitle {
+                font-family: "Varela Round", sans-serif;
+                font-size: 15px;
+                line-height: 1.5;
+                color: var(--blue-body);
+                word-break: break-word;
+                word-wrap: break-word;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .calendarMonthChanger {
+                justify-content: center;
+                align-items: center;
+                height: 38px;
+                color: #00a2ff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .calendarHeader {
+                font-family: "Varela Round", sans-serif;
+                font-size: 13px;
+                line-height: 1.5;
+                color: #4d5055;
+                word-break: break-word;
+                overflow-wrap: break-word;
+                -webkit-font-smoothing: antialiased;
+                text-align: center;
+                color: var(--blue-body);
+                font-weight: bold;
+            }
+
+            .hourContainer {
+                height: 23px;
+                color: var(--grey-dark);
+                cursor: pointer;
+                width: 100px;
+                float: left;
+                margin-left: 8px;
+                margin-bottom: 9px;
+                line-height: 23px;
+                border: 1px solid;
+                border-radius: 2px;
+                font-size: 12px;
+                font-weight: bold;
+                justify-content: center;
+                padding: 0 8px;
+                position: relative;
+                text-align: center;
+                text-shadow: none;
+                vertical-align: middle;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        /* var companyCode = '0e31852';  magnolias*/
+        //var companyCode = '0d84b6ac';
+        var companyCode = ""
+        //var companyCode = '02e0f6e7'; /*pontevedra*/
+        //var companyCode = '91c65921'; /*conconcreto*/
+        var projectCode;
+        var projectId;
+        var moduleId;
+        var _actionId = "a8f9d82f-ec2a-4c7a-a580-da189b9bd29b"; //Visita Programada*/
+        var userId;
+        var ProspectId;
+        var companyId;
+        var _eventComment = "Cita programada por medio de la Customer Experience";
+        var today = new Date();
+        let listTotalEvents = [];
+        var urlApiLocal = "http://localhost:50345";
+        var urlApiProduc = "https://api.smart-home.com.co";
+        //var urlLocalManage = "http://localhost:65408";
+        var urlLocalManage = "https://manage.smart-home.com.co/CustomerExperiences";
+
+        var DATE_FORMAT = "MM/DD/YYYY";
+        var CALENDAR_DATE_FORMAT = "%m/%d/%Y";
+
+        if (window.addEventListener) {
+            window.addEventListener("load", initialize, false);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent("onload", initialize, false);
+        }
+
+        function getUrlParameterValue(parameter) {
+            parameter = parameter.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + parameter + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return results[1];
+        }
+
+
+
+        function initialize() {
+
+            checkCookies();
+
+        }
+        function checkCookies() {
+            var displaySessionCookie = readCookie("sessionLogin");
+            if (displaySessionCookie != null) {
+                prospectId = displaySessionCookie;
+            }
+            console.log(displaySessionCookie);
+            var displayCompanyCode = readCookie("sessionCompanyCode");
+            if (displayCompanyCode != null) {
+                console.log(displayCompanyCode);
+                companyCode = displayCompanyCode;
+
+            }
+            GetSessionUserValue();
+            getData(displaySessionCookie);
+
+
+        }
+        function GetSessionUserValue() {
+
+            var value = getCookie("sessionLogin");
+            return value;
+            console.log(value);
+
+        }
+        //consulta de la imagen del projecto, el projectCode y el ownerId
+        async function getData(cookie) {
+            var data = {
+                ProspectId: cookie,
+
+            };
+
+            let Commercial = await fetch(urlLocalManage + '/CustomerExperienceApi.ashx?action=commercial', {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Credentials': 'true',
+
+                },
+                method: "POST",
+                body: JSON.stringify(data)
+
+
+            });
+            let result = await Commercial.json();
+            getImageProject(result);
+            console.log("comercial project code");
+            console.log(result);
+            getProspectDetail(result, cookie);
+            userId = result[0].OwerId;
+
+        }
+        //asigna la imagen del proyecto
+        function getImageProject(result) {
+            var imgProject = document.getElementById("imgProject");
+            imgProject.src = result[0].ImageProject;
+        }
+        //consulta detalle del customer
+        async function getProspectDetail(response, prospectId) {
+            projectCode = response[0].ProjectCode;
+            let customer = await fetch(urlApiProduc + '/api/v1/getCustomerDetail/' + companyCode + '/' + projectCode + '/' + prospectId, {
+                method: 'GET',
+
+            });
+            let result = await customer.json();
+            console.log("consulta detalle del customer");
+            console.log(result);
+            moduleId = result.prospects[0].moduleId;
+            projectId = result.prospects[0].projectId;
+
+
+            getModuleDetail(companyCode, projectCode, moduleId, projectId);
+
+        }
+        //consulta el detalle del inmueble
+        async function getModuleDetail(companyCode, projectCode, moduleId, projectId) {
+            let module = await fetch(urlApiProduc + '/api/v1/getUnit/' + companyCode + '/' + projectCode + '/' + moduleId, {
+                method: 'GET',
+            });
+            let response = await module.json();
+            console.log(response);
+            moduleDetail(response);
+            getImageModule(projectId, moduleId);
+        }
+        //grafica la información del detalle del inmueble
+        function moduleDetail(response) {
+            var divModuleDetail = document.getElementById("tableModuleDetail");
+            while (divModuleDetail.firstChild) divModuleDetail.removeChild(divModuleDetail.firstChild);
+
+
+            var table = document.createElement("table");
+            table.setAttribute("style", "width:100%; text-align:left;");
+
+            var trTable = document.createElement("tr");
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%; padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-home';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Nombre Inmueble: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].name));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%; padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-chart-area';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Área construida: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].totalArea + " m"));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+            table.appendChild(trTable);
+
+            var trTable = document.createElement("tr");
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%; padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-chart-area';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Área privada: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].privateArea + " m"));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+
+            trTable.appendChild(tdTable);
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%; padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-bed';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("# habitaciones: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].bedroom));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+
+            trTable.appendChild(tdTable);
+            table.appendChild(trTable);
+
+
+            var trTable = document.createElement("tr");
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%; padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-toilet';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("# de baños: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].bathrooms));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%; padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-list-ol';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Etapa: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].unit));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+            table.appendChild(trTable);
+
+
+            var trTable = document.createElement("tr");
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%;  padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-building';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Torre: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].building));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+            table.appendChild(trTable);
+
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%;  padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-layer-group';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Piso: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].floor));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+
+            var trTable = document.createElement("tr");
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%;  padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-house-user';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Tipo: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].type));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+            table.appendChild(trTable);
+
+
+
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%;  padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-car';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Garajes: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].garageNumber));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+
+            var trTable = document.createElement("tr");
+            var tdTable = document.createElement("td");
+            tdTable.setAttribute("style", "width:50%;  padding:2%;");
+            var div = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.className = 'fas fa-archive';
+            div.appendChild(icon);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode("Depositos: "));
+            div.appendChild(span);
+            var br = document.createElement("br");
+            div.appendChild(br);
+            var span = document.createElement("span");
+            span.appendChild(document.createTextNode(response.units[0].storageNumber));
+            div.appendChild(span);
+            div.className = 'ModuleDetail';
+            tdTable.appendChild(div);
+            trTable.appendChild(tdTable);
+            table.appendChild(trTable);
+
+            divModuleDetail.appendChild(table);
+        }
+        //consulta las imagenes que tenga cargado el inmueble
+        async function getImageModule(projectId, moduleId) {
+            let image = await fetch(urlLocalManage + '/CustomerExperienceApi.ashx?action=imageModule&projectId=' + projectId + '&moduleId=' + moduleId, {
+                method: 'GET',
+            });
+            let response = await image.json();
+            console.log("iamagenes ");
+            console.log(response);
+            if (response[0].isValid == 0) {
+
+                alert(response[0].status);
+            } else {
+                showImageModule(response)
+                console.log("imagenes del proyecto");
+                console.log(response);
+
+            }
+        }
+
+        function showImageModule(response) {
+            var divImageModule = document.getElementById("imgModule")
+
+            if (response.length > 0) {
+
+                for (var i = 0; i < response.length; i++) {
+
+                    var image = document.createElement("img");
+                    image.className = 'styleImageModule';
+                    image.src = response[i];
+                    divImageModule.appendChild(image);
+                }
+                divImageModule.className = 'styleImageContent';
+            }
+        }
+
+        function OpenPSE() {
+            window.open("https://www.pse.com.co/inicio")
+        }
+        //#region de calendario agendar visita
+        var getDaysInMonth = function (month, year) {
+            // Here January is 1 based
+            //Day 0 is the last day in the previous month
+            return new Date(year, month, 0).getDate();
+            // Here January is 0 based
+            // return new Date(year, month+1, 0).getDate();
+        };
+
+        var getDateFromWeek = function (year, week) {
+            var date = new Date(year, 0, 1);
+            var daysOffset = 1 - date.getDay();
+            var firstMonday = new Date(date.setDate(date.getDate() + daysOffset));
+            return new Date(date.setDate(firstMonday.getDate() + (week * 7)));
+        }
+
+
+        function nextMonth() {
+            today = new Date(today.getFullYear(), today.getMonth(), 1);
+            today = new Date(today.setMonth(today.getMonth() + 1));
+            generateDates();
+        }
+
+        function prevMonth() {
+            today = new Date(today.getFullYear(), today.getMonth(), 1);
+            today = new Date(today.setMonth(today.getMonth() - 1));
+            generateDates();
+        }
+
+
+        function ShowCalendar() {
+            var divCalendar = document.getElementById("divCalendar");
+            divCalendar.style.display = "block";
+            generateDates();
+        }
+        function generateDates() {
+
+            var firstDayMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+            var lastDayMonth = new Date(today.getFullYear(), today.getMonth(), getDaysInMonth(today.getYear(), today.getMonth()));
+            var firstWeek = firstDayMonth.getWeek() - 1;
+            var lastWeek = lastDayMonth.getWeek() + 1;
+            var currentMonth = dateFormat(today, "mmmm yyyy")
+
+            if (firstWeek > lastWeek) firstWeek = 1;
+
+            var monthlyCalendar = [];
+
+            for (var weekNumber = firstWeek; weekNumber < lastWeek; weekNumber++) {
+
+                var month = [];
+
+                month = { CurrentMonth: today.getMonth(), Week: weekNumber };
+                var firstDayOfCurrentWeek = getDateFromWeek(firstDayMonth.getFullYear(), weekNumber);
+
+                var days = [];
+
+                for (var weekDay = 0; weekDay < 7; weekDay++) {
+                    var currentWeekDate = new Date(firstDayOfCurrentWeek);
+                    var weekDate = new Date(currentWeekDate.setDate(currentWeekDate.getDate() + weekDay));
+                    days.push({ Date: weekDate });
+                }
+
+                month.Days = days;
+                monthlyCalendar.push(month);
+            }
+
+            bindCalendar(currentMonth, monthlyCalendar);
+
+            startDateRange = getDateFromWeek(today.getFullYear(), firstWeek).toISOString().substring(0, 10);
+            endDateRange = getDateFromWeek(today.getFullYear(), lastWeek).toISOString().substring(0, 10);
+
+            getEvents(startDateRange, endDateRange);
+        }
+        //consulta los eventos de ese dia
+        async function getEvents(startDateRange, endDateRange) {
+
+            let events = await fetch(urlApiProduc + "/api/v1/getEvents/" + companyCode + "/" + projectCode + "/"
+                + userId + "/" + _actionId + "/" + startDateRange + "/" + endDateRange, {
+                method: 'GET',
+            });
+            let response = await events.json();
+            getTotalCalendarEvents(response);
+        }
+
+        var monthlyCalendarEvents;
+        var totalMonthlyCalendarEvents;
+
+        function getTotalCalendarEvents(CalendarEvents) {
+            totalMonthlyCalendarEvents = CalendarEvents;
+            listTotalEvents.push(totalMonthlyCalendarEvents);
+        }
+
+
+        function bindCalendar(currentMonth, weekList) {
+
+            var table = document.createElement("TABLE");
+
+            table.id = "calendarContainer";
+            table.cellPadding = "0";
+            table.cellSpacing = "0";
+            table.className = "calendarContainer";
+
+            var tableRowMonthHeader = document.createElement("TR");
+            tableRowMonthHeader.className = "calendarHeader";
+
+            var tableDataPrevMonth = document.createElement("TD");
+            tableDataPrevMonth.className = "calendarMonthChanger";
+            tableDataPrevMonth.colSpan = 2;
+            tableDataPrevMonth.appendChild(document.createTextNode("⏪"));
+            tableDataPrevMonth.setAttribute('onclick', "prevMonth()");
+            tableRowMonthHeader.appendChild(tableDataPrevMonth);
+
+            var tableDataCurrentMonth = document.createElement("TD");
+            tableDataCurrentMonth.className = "calendarMonthTitle";
+            tableDataCurrentMonth.colSpan = 3;
+            tableDataCurrentMonth.appendChild(document.createTextNode(currentMonth));
+            tableRowMonthHeader.appendChild(tableDataCurrentMonth);
+
+            var tableDataNextMonth = document.createElement("TD");
+            tableDataNextMonth.className = "calendarMonthChanger";
+            tableDataNextMonth.colSpan = 2;
+            tableDataNextMonth.appendChild(document.createTextNode("⏩"));
+            tableDataNextMonth.setAttribute('onclick', "nextMonth()");
+            tableRowMonthHeader.appendChild(tableDataNextMonth);
+
+            table.appendChild(tableRowMonthHeader);
+
+            var tableRowHeader = document.createElement("TR");
+            tableRowHeader.className = "calendarHeader";
+
+            var tableDataMonday = document.createElement("TD");
+            tableDataMonday.appendChild(document.createTextNode("Lun."));
+            tableRowHeader.appendChild(tableDataMonday);
+
+            var tableDataTuesday = document.createElement("TD");
+            tableDataTuesday.appendChild(document.createTextNode("Mar."));
+            tableRowHeader.appendChild(tableDataTuesday);
+
+            var tableDataWednesday = document.createElement("TD");
+            tableDataWednesday.appendChild(document.createTextNode("Mié."));
+            tableRowHeader.appendChild(tableDataWednesday);
+
+            var tableDataThursday = document.createElement("TD");
+            tableDataThursday.appendChild(document.createTextNode("Jue."));
+            tableRowHeader.appendChild(tableDataThursday);
+
+            var tableDataFriday = document.createElement("TD");
+            tableDataFriday.appendChild(document.createTextNode("Vie."));
+            tableRowHeader.appendChild(tableDataFriday);
+
+            var tableDataSaturday = document.createElement("TD");
+            tableDataSaturday.appendChild(document.createTextNode("Sab."));
+            tableRowHeader.appendChild(tableDataSaturday);
+
+            var tableDataSunday = document.createElement("TD");
+            tableDataSunday.appendChild(document.createTextNode("Dom."));
+            tableRowHeader.appendChild(tableDataSunday);
+
+            table.appendChild(tableRowHeader);
+
+            var today = new Date();
+            var weekDate = new Date();
+
+            for (var i = 0; i < weekList.length; i++) {
+
+                var tableRowWeeks = document.createElement("TR");
+                tableRowWeeks.className = "calendarWeeks";
+
+                var currentMonth = weekList[i].CurrentMonth;
+                var days = weekList[i].Days;
+
+                for (var j = 0; j < days.length; j++) {
+
+                    var weekDate = days[j].Date;
+
+                    var tableDataDayContainer = document.createElement("TD");
+
+                    if (dateFormat(weekDate, "m/dd/yy") == dateFormat(today, "m/dd/yy")) {
+                        tableDataDayContainer.className = "calendarCurrentDay";
+                    }
+                    else if (weekDate > today) {
+                        tableDataDayContainer.className = "calendarNextDay";
+                    }
+                    else {
+                        tableDataDayContainer.className = "calendarDay";
+                    }
+
+                    tableDataDayContainer.setAttribute('onclick', "getAvailableHours('" + dateFormat(weekDate, "yyyy/mm/dd") + "');");
+                    tableDataDayContainer.id = "date_" + dateFormat(weekDate, "yyyy/mm/dd");
+
+                    var tableDataContentDiv1 = document.createElement("DIV");
+
+                    if (dateFormat(weekDate, "mm") == currentMonth) {
+                        tableDataContentDiv1.className = "calendarDayNumberCurrentMonth";
+                    }
+                    else {
+                        tableDataContentDiv1.className = "calendarDayNumber";
+                    }
+
+                    tableDataContentDiv1.appendChild(document.createTextNode(dateFormat(weekDate, "dd")));
+
+                    tableDataDayContainer.appendChild(tableDataContentDiv1);
+
+                    var tableDataContentDiv2 = document.createElement("DIV");
+
+                    tableDataDayContainer.appendChild(tableDataContentDiv2);
+
+                    tableRowWeeks.appendChild(tableDataDayContainer);
+                }
+
+                table.appendChild(tableRowWeeks);
+            }
+
+            var divContainer = document.getElementById("divCalendarDateContainer");
+            while (divContainer.hasChildNodes()) divContainer.removeChild(divContainer.lastChild);
+
+            divContainer.appendChild(table);
+        }
+
+        function getUniqueCalendarEvents() {
+            for (var i = 0; i < listTotalEvents.length; i++) {
+                evenList = listTotalEvents[i].events;
+
+                if (i == 0) {
+                    monthlyCalendarEvents = listTotalEvents[0].events;
+                }
+                else {
+                    for (var j = 0; j < evenList.length; j++) {
+                        monthlyCalendarEvents.push(evenList[j]);
+                    }
+                }
+            };
+        }
+
+        var _selectedDate;
+
+        function getAvailableHours(selectedDateItem) {
+
+            getUniqueCalendarEvents();
+
+            let existVisitProspect = monthlyCalendarEvents.filter(filter => filter.prospectId == prospectId && filter.status == 1);
+
+            if (existVisitProspect.length > 0) {
+                alert('Ya tiene una visita programada el: ' + existVisitProspect[0].startTime);
+                return;
+            };
+
+            var selectedDate = new Date(selectedDateItem);
+
+            if (selectedDate < new Date()) {
+                return;
+            }
+
+
+            _selectedDate = selectedDate;
+
+            selectDateItem(selectedDateItem);
+
+            var hours = [];
+
+            var currentFilter = dateFormat(selectedDate, "m/dd/yy ");
+            var d = new Date(currentFilter);
+            var n = d.getDay();
+
+
+
+            if (n == 6 || n == 0) {
+                for (var hour = 9; hour < 12; hour++) {
+
+                    let formatHour = hour;
+                    if (hour == 13) formatHour = 1;
+                    if (hour == 14) formatHour = 2;
+                    if (hour == 15) formatHour = 3;
+                    if (hour == 16) formatHour = 4;
+
+                    if (hour != 13) {
+                        var currentFilterHour = dateFormat(selectedDate, "m/dd/yy ") + formatHour;
+
+                        var busyHour = monthlyCalendarEvents.filter(filter =>
+                            dateFormat(new Date(filter.startTime), "m/dd/yy h") == currentFilterHour && filter.status == 1);
+                        if (busyHour.length == 0) {
+                            hours.push(hour + ":00");
+                        }
+                    }
+                }
+            }
+            else {
+                for (var hour = 10; hour < 17; hour++) {
+
+                    let formatHour = hour;
+                    if (hour == 13) formatHour = 1;
+                    if (hour == 14) formatHour = 2;
+                    if (hour == 15) formatHour = 3;
+                    if (hour == 16) formatHour = 4;
+
+                    if (hour != 13) {
+                        var currentFilterHour = dateFormat(selectedDate, "m/dd/yy ") + formatHour;
+
+                        var busyHour = monthlyCalendarEvents.filter(filter =>
+                            dateFormat(new Date(filter.startTime), "m/dd/yy h") == currentFilterHour && filter.status == 1);
+                        if (busyHour.length == 0) {
+                            hours.push(hour + ":00");
+                        }
+                    }
+                }
+            }
+
+
+
+
+            bindAvailableHours(hours);
+        }
+
+        var _selectedHour = "";
+
+        function selectAvailableHour(hour) {
+
+            _selectedHour = hour;
+            selectHourItem(hour);
+
+            var divCalendarDateText = document.getElementById("divCalendarDateText");
+
+            var scheduledStartDate = new Date(_selectedDate);
+            var ArrayHour = _selectedHour.toString().split(":")
+            var fHour = ArrayHour[0];
+            var fMin = ArrayHour[1];
+            scheduledStartDate.setHours(fHour, fMin);
+
+            var divCalendarDateText = document.getElementById("divCalendarDateText");
+            while (divCalendarDateText.hasChildNodes()) divCalendarDateText.removeChild(divCalendarDateText.lastChild);
+            divCalendarDateText.appendChild(document.createTextNode(dateFormat(scheduledStartDate, "dd 'de' mmmm 'de' yyyy 'a las ' HH:MM")));
+            var divCalendarScheduleButton = document.getElementById("divCalendarScheduleButton");
+            divCalendarScheduleButton.style.display = "block";
+
+            var spanCalendarDateText = document.getElementById("spanCalendarDateText");
+            spanCalendarDateText.style.display = "block";
+            showSheduleEvent();
+
+        }
+
+        function showSheduleEvent() {
+            var divCalendarDateText = document.getElementById("divCalendarDateText");
+            divCalendarDateText.style.display = "block";
+        }
+
+        function bindAvailableHours(hourList) {
+
+            var divHourContainer = document.createElement("DIV");
+
+            divHourContainer.id = "hourContainer";
+            divHourContainer.cellPadding = "0";
+            divHourContainer.cellSpacing = "0";
+            divHourContainer.style = "margin:0 auto;";
+
+            for (var i = 0; i < hourList.length; i++) {
+
+                var tableDataContentDiv1 = document.createElement("DIV");
+                tableDataContentDiv1.className = "hourContainer";
+                tableDataContentDiv1.appendChild(document.createTextNode(hourList[i]));
+                tableDataContentDiv1.setAttribute('onclick', "selectAvailableHour('" + hourList[i] + "');");
+                tableDataContentDiv1.id = "hour_" + hourList[i];
+                divHourContainer.appendChild(tableDataContentDiv1);
+            }
+
+            var divContainer = document.getElementById("divAvailableHourContainer");
+            while (divContainer.hasChildNodes()) divContainer.removeChild(divContainer.lastChild);
+
+            var spanAvailableHour = document.getElementById("spanAvailableHour");
+            spanAvailableHour.style.display = "block";
+            divContainer.appendChild(divHourContainer);
+        }
+
+        var prevSelectedDate = "";
+
+        function selectDateItem(selectedDate) {
+
+            var selectedRow = document.getElementById("date_" + selectedDate);
+
+            if (selectedRow != null) {
+                selectedRow.className = "calendarSelected";
+            }
+
+            if (prevSelectedDate != "" && selectedDate != prevSelectedDate) {
+
+                var prevSelectedRow = document.getElementById("date_" + prevSelectedDate);
+
+                if (prevSelectedRow != null) {
+                    prevSelectedRow.className = "calendarNextDay";
+                }
+            }
+
+            prevSelectedDate = selectedDate;
+        }
+
+        var prevSelectedHour = "";
+
+        function selectHourItem(selectedHour) {
+
+            var selectedRow = document.getElementById("hour_" + selectedHour);
+
+            if (selectedRow != null) {
+                selectedRow.className = "hourSelected";
+            }
+
+            if (prevSelectedHour != "" && selectedHour != prevSelectedHour) {
+
+                var prevSelectedRow = document.getElementById("hour_" + prevSelectedHour);
+
+                if (prevSelectedRow != null) {
+                    prevSelectedRow.className = "hourContainer";
+                }
+            }
+
+            prevSelectedHour = selectedHour;
+        }
+
+        async function scheduleDate() {
+
+            if (_selectedDate == "" || _selectedHour == "") {
+                alert("Para programar una agenda, debe seleccionar el dia y la hora.");
+                return;
+            }
+
+            var scheduledStartDate = new Date(_selectedDate);
+
+            var ArrayHour = _selectedHour.toString().split(":")
+            var fHour = ArrayHour[0];
+            var fMin = ArrayHour[1];
+            scheduledStartDate.setHours(fHour, fMin);
+
+            getEvents(startDateRange, endDateRange);
+            getUniqueCalendarEvents();
+
+            let confirmVisitProspect = monthlyCalendarEvents.filter(filter => dateFormat(new Date(filter.startTime), "m/dd/yy h") == dateFormat(new Date(scheduledStartDate), "m/dd/yy h") && filter.status == 1);
+
+            if (confirmVisitProspect.length == 0) {
+                var data = {
+                    userId: userId,
+                    actionId: _actionId,
+                    eventContent: _eventComment,
+                    isAnEvent: true,
+                    scheduledDate: scheduledStartDate,
+                };
+
+                let event = await fetch("https://api.smart-home.com.co/api/v1/postEvent/" + companyCode + "/" + projectCode + "/" + prospectId + "/", {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Credentials': 'true',
+
+                    },
+                    method: "POST",
+                    body: JSON.stringify(data)
+                });
+                let result = await event.json();
+                alert("Evento creado correctamente");
+            }
+
+            else {
+                alert("Se ha actualizado el calendario, por favor agende de nuevo su visita!");
+                location.reload();
+            }
+        }
+
+        //# fin region de calendario agendar visita
+
+        //whatsapp
+        async function OpenWhatsApp() {
+
+            let contactUser = await fetch('http://localhost:50345/api/v1/getUser/' + companyCode + '/' + userId, {
+                method: 'GET',
+            });
+            let result = await contactUser.json();
+            var mobileNumber = result.users[0].mobileNumber;
+            var EmployeeName = result.users[0].firstName;
+            var messageW = "Hola " + EmployeeName + ", ";
+            window.open("https://api.whatsapp.com/send?phone=057" + mobileNumber + "&text=" + messageW)
+        }
+
+        //cerrar sesion
+        function closeSession() {
+
+            window.location.replace(urlLocalManage + "/LoginCustomerExperince.html?action=login&companyCode=" + companyCode);
+        }
+        window.onload = function () {
+            var contenedor = document.getElementById("contenedor_carga");
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = '0';
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="divheader">
+            <table style="width:100%">
+                <tr>
+                    <td style="width:15%; text-align:center" onclick="closeSession()">
+                        <button class="exit" style="color:white" type="button" onclick="closeSession()">
+                            <i class='fas fa-sign-out-alt'></i>
+
+                        </button>
+                    </td>
+                    <td style="width:50%; text-align:center;"><p>COMERCIAL</p></td>
+                    <td style="width:35%"><img id="imgProject" class="imgProject" /></td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </header>
+
+    <div class="body-panel">
+        <div class="menu">
+
+
+            <div class="card"><a href="PanelCustomerExperience.html">Inicio</a></div>
+            <div class="card"><a href="ProfileCustomerExperience.html">Perfil</a></div>
+            <div class="card"><a href="AgreementCustomerExperience.html">Cartera</a></div>
+            <div class="card"><a href="FormalitiesCustomerExperience.html">Trámites</a></div>
+            <div class="card"><a href="AfterSalesCustomerExperience.html">Servicio/cliente</a></div>
+            <div class="card"><a href="ContactsCustomerExperience.html">Contactos</a></div>
+
+
+        </div>
+        <div class="body-quotation">
+            <div style="color:var(--blue-body); font-size:20px; font-weight:bold">Información del inmueble</div>
+            <div style="width:100%" id="tableModuleDetail">
+
+            </div>
+            <div style="padding:5%" id="imgModule">
+
+            </div>
+
+        </div>
+
+        <div id="contenedor_carga">
+            <div id="carga"></div>
+        </div>
+        <!--<div>
+            <div class="btn" onclick="ShowCalendar();">Agendar Visita</div>
+        </div>-->
+        <br />
+        <!--<div id="divCalendar" class="calendar" style="">
+            <span> Selecciona una fecha</span>
+            <div id="divCalendarContainer">
+                <div class="answereResult">
+                    <div id="divCalendarDateContainer"></div>
+                </div>
+            </div>
+            <br />
+            <span id="spanAvailableHour" style="display:none">Elige un horario</span>
+            <br />
+            <div class="answereResult">
+                <div id="divAvailableHourContainer"></div>
+            </div>
+            <br />
+            <br />
+            <div>
+                <br />
+                <span id="spanCalendarDateText" style="display:none">Confirma tu cita</span>
+                <div style="display: contents; text-align:center;">
+                    <div class="answereResult">
+                        <div id="divCalendarDateText" style="font-weight:bold; display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div>
+                <span style="display:none">Programa tu cita</span>
+                <div class="row" style="display: inline; text-align:center;">
+                    <div id="divCalendarScheduleButton" style="display:none;">
+                        <div onclick="scheduleDate();" id="div_btnScheduledate" class="btn-cita">
+                            📅 Programar Cita
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <br />
+        <br />
+        <div id="divWhatsapp" CssClass="non-printable" class="whatsapp" onclick="OpenWhatsApp()">
+            <div class="mint-popover belowLeft mint-popover-bob dark animate in">
+                <a style="color: white; text-decoration: none; cursor: pointer; " id="whatsappMessage">
+                    <div style="width: 5%; margin: 0 auto;">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                             class="whatsappImg"
+                             viewBox="0 0 48 48"
+                             style=" fill:#000000;">
+                            <path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6  C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path>
+                            <path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6    C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3   L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path>
+                            <path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3 L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24   c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2  c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path>
+                            <path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8    l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path>
+                            <path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0    s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3  c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9    c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8    c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <footer>
+        <div class="pse">
+            <img src="./Images/PSE_logo.png" style="width: 35px; align-content: flex-end; float: inline-end; cursor: pointer;" onclick="OpenPSE();" />
+        </div>
+    </footer>
+
+</body>
+
+</html>
